@@ -6,6 +6,7 @@ FROM debian:buster-slim
 LABEL maintainer="walentinlamonos@gmail.com"
 
 ENV STEAMCMDDIR /home/steam/steamcmd
+ENV STEAMDATADIR /home/steam/Steam
 
 # Install, update & upgrade packages
 # Create user for the server
@@ -35,3 +36,4 @@ RUN set -x \
 WORKDIR $STEAMCMDDIR
 
 VOLUME $STEAMCMDDIR
+VOLUME $STEAMDATADIR
